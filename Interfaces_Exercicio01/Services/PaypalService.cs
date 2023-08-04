@@ -1,11 +1,11 @@
-﻿namespace Interfaces_Exercicio01.Services {
+﻿namespace Services {
     internal class PaypalService : IOnlinePaymentService {
-        double PaymentFee(double amount) {
-            return amount *= 1.01;
+        public double PaymentFee(double amount) {
+            return amount *= 1.02;
         }
 
-        double Interest(double amount, int months) {
-
+        public double Interest(double amount, int months) {
+            return amount *= ((months * 0.01) + 1);
         }
     }
 }
